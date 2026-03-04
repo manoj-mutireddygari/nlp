@@ -120,6 +120,32 @@ def Armstrong_Number():
 
 
 
+#week1-Day-3
+#counting vowels in the sting
+def count_vowels():
+    string = input("Enter a string: ").strip().lower()
+    vowels=['a','e','i','o','u']
+    count =0
+    for i in range(len(string)):
+        if string[i] in vowels:
+            count += 1
+    print("Number of vowels:", count)
 
+#largest number in the list
+def largest_in_list():
+    numbers = list(map(int, input("enter the number seperated by space:").split()))
+    largest = numbers[0]
+    for i in range(1,len(numbers)):
+        if numbers[i] > largest:
+            largest = numbers[i]
+    print("Largest number:", largest)
 
+#reverse a list
+def reverse_a_list():
+    num = list(map(int ,input("enter the numbers seperate them by space:").split()))
+    reverse = []
 
+    for i in range(len(num)-1, -1, -1):
+        reverse.append(num[i])
+
+    print("Reversed list:", reverse)
