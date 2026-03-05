@@ -149,3 +149,18 @@ def reverse_a_list():
         reverse.append(num[i])
 
     print("Reversed list:", reverse)
+
+#remove duplicate from the list
+def remove_duplicate_num_in_list():
+    lst = list(map(int ,input("Enter the numbers separate them by space:").split()))
+    clean_lst =[]
+    for num in lst:
+        if num not in clean_lst:
+            clean_lst.append(num)
+    print("List after removing duplicates:", clean_lst)
+
+remove_duplicate_num_in_list()
+
+
+
+
