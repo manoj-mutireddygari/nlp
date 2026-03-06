@@ -159,7 +159,62 @@ def remove_duplicate_num_in_list():
             clean_lst.append(num)
     print("List after removing duplicates:", clean_lst)
 
-remove_duplicate_num_in_list()
+
+#week1- Day4
+#count frequency of string
+def count_frequency():
+    string = input("Enter the string:")
+    frequency ={}
+    for i in range(len(string)):
+        if string[i] in frequency:
+            frequency[string[i]] += 1
+        else:
+            frequency[string[i]] = 1
+    print("frequency of the word" , frequency)
+
+#count frequency of string method-2
+def count_frequency2():
+    text = input("Enter the string: ")
+    freq = {}
+
+    for char in text:
+        freq[char] = freq.get(char, 0) + 1
+
+    print(freq)
+
+#finding max frequency letter in string
+def max_frequency():
+    text = input("Enter the string: ")
+    freq = {}
+
+    for char in text:
+        freq[char] = freq.get(char, 0) + 1
+    high_frequency =max(freq.items(), key=lambda item: item[1])
+    print(high_frequency)
+
+#two sum problem
+def two_sum():
+    lst = list(map(int,input("Enter the numbers seperate them by space").split()))
+    target = int(input("Enter the target:"))
+    for i in range(len(lst)):
+        for j in range(i+1,len(lst)):
+            if lst[i]+lst[j]==target:
+                print("indexes",i,j)
+                print("values",lst[i],lst[j])
+
+#two sum method 2
+def two_sum2():
+    lst = list(map(int,input("Enter the numbers seperate them by space").split()))
+    target = int(input("Enter the target:"))
+    hashmap ={}
+    for i,num in enumerate(lst):
+        comp = target-num
+        if comp in hashmap:
+            print("indexes",hashmap[comp],i)
+            print("values",comp,num)
+        hashmap[num]=i
+
+two_sum2()
 
 
 
